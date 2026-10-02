@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4Dev Studio — Software Built for the Way You Work</title>
+  <meta name="description" content="4Dev Studio builds web apps, mobile apps, and business systems that automate operations, sales, and entire companies." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="orb orb-blue" aria-hidden="true"></div>
+  <div class="orb orb-violet" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ==========================================================
+       NAV
+       ========================================================== -->
+  <header class="nav">
+    <div class="container-x nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+        <span>4Dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="contact.html">Book a call</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+        <!-- ==========================================================
+         1. HERO — Spline background
+         ========================================================== -->
+    <section class="hero hero-bg">
+      <!-- Spline canvas as background -->
+      <div class="hero-bg-canvas" aria-hidden="true">
+        <spline-viewer
+          url="https://prod.spline.design/WYC9gE8yWrqG0k4W/scene.splinecode"
+          loading-anim-type="spinner-small-dark"
+        ></spline-viewer>
+      </div>
+
+      <!-- Gradient overlay for text readability -->
+      <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+      <!-- Foreground content -->
+      <div class="hero-inner">
+        <p class="eyebrow fade-up">Web Development · Custom Software · Digital Solutions</p>
+
+        <h1 class="fade-up delay-1">
+          Software built for<br />
+          <span class="text-gradient">the way you work.</span>
+        </h1>
+
+        <p class="lead fade-up delay-2">
+          We design and build web apps, mobile apps, and full business
+          systems — built around how your business actually runs.
+        </p>
+
+        <div class="hero-actions fade-up delay-3">
+          <a class="btn btn-primary btn-arrow" href="contact.html">Book a discovery call</a>
+          <a class="btn btn-ghost" href="services.html">See what we do</a>
+        </div>
+
+        <div class="hero-trust fade-up delay-4">
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="4">0</span>
+            <span class="hero-trust-label">Core services</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="10" data-suffix=" wks">0</span>
+            <span class="hero-trust-label">Typical build</span>
+          </div>
+          <div class="hero-trust-item">
+            <span class="hero-trust-num" data-count="100" data-suffix="%">0</span>
+            <span class="hero-trust-label">Custom built</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         2. PROBLEM
+         ========================================================== -->
+    <section class="section problem">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">The problem</p>
+          <h2>If any of these sound familiar — you're in the right place.</h2>
+        </div>
+
+        <ul class="problem-list">
+          <li class="problem-item">You're running the business on spreadsheets and group chats.</li>
+          <li class="problem-item">Every report takes a full day to pull together.</li>
+          <li class="problem-item">Leads slip because no one followed up in time.</li>
+          <li class="problem-item">Your tools don't talk to each other.</li>
+          <li class="problem-item">You have an idea but no technical team.</li>
+          <li class="problem-item">Manual work is eating your team's week.</li>
+        </ul>
+
+        <p class="problem-close">
+          We build the system that fixes it. <em>Custom software, built around how you actually run.</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. WHAT WE DO
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>Four ways we help you move faster.</h2>
+          <p>Every engagement is scoped around an outcome — not hours or deliverables.</p>
+        </div>
+
+        <div class="grid grid-4" data-pillars-grid>
+          <!-- populated by js/services.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. PROCESS
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">How we work</p>
+          <h2>A process that keeps you in the loop.</h2>
+          <p>Weekly demos, transparent progress, and no surprises.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">STEP 01</div>
+            <h4>Discover</h4>
+            <p>We map how your business actually runs and identify where the real leverage is.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">STEP 02</div>
+            <h4>Design</h4>
+            <p>We shape the solution and confirm it matches your reality before we write a line of code.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">STEP 03</div>
+            <h4>Build</h4>
+            <p>Weekly sprints and working demos every Friday. You see progress in real time.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">STEP 04</div>
+            <h4>Launch &amp; Scale</h4>
+            <p>We roll out, train your team, and keep improving based on real usage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         5. FAQ
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">FAQs</p>
+          <h2>Answers before you ask.</h2>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" type="button">How long does a typical project take?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Most builds ship in 6–10 weeks, with a working prototype in the first three. Simple sites or automations can ship faster — complex systems take longer. We'll give you a realistic timeline after the discovery call.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">What does a project cost?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              We quote fixed-scope prices after discovery — no hourly billing, no surprise invoices. Small automations start around a few thousand. Full products range higher depending on complexity.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">Do you work with existing teams or codebases?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Yes. We regularly join in-flight projects, take over unfinished work, or augment in-house teams. We'll audit what exists and tell you honestly whether we can add value.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">What happens after launch?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Most clients move to a monthly retainer for ongoing improvements, monitoring, and iteration. Or we hand off cleanly with full documentation, and you take it from there. Your call.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">Who owns the code?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              You do. Full ownership, source access, and documentation transfer to you at project close. No lock-in.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. CTA
+         ========================================================== -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="cta-band">
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Let's build something that works.</h2>
+          <p>Tell us what you're trying to do. We'll tell you how we'd approach it — no sales pitch, no obligation.</p>
+          <a class="btn btn-primary btn-arrow" href="contact.html">Book a discovery call</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="footer">
+    <div class="container-x">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" href="index.html">
+            <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+            <span>4Dev</span>
+          </a>
+          <p>Software built for the way you work. Web, mobile, and business systems — custom built for you.</p>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="service.html?slug=automate-operations">Automate Operations</a></li>
+            <li><a href="service.html?slug=automate-sales">Automate Sales</a></li>
+            <li><a href="service.html?slug=automate-business">Automate Business</a></li>
+            <li><a href="service.html?slug=build-your-idea">Build Your Idea</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get in touch</h5>
+          <ul>
+            <li><a href="mailto:hello@4dev.studio">hello@4dev.studio</a></li>
+            <li><a href="contact.html">Book a call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> 4Dev Studio. All rights reserved.</span>
+        <span>Built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       SCRIPTS
+       ========================================================== -->
+  <script type="module" src="https://cdn.spline.design/@splinetool/viewer@2.0.65/build/spline-viewer.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>
