@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service | 4Dev Studio</title>
-  <meta name="description" content="See how we help businesses automate operations, sales, and product delivery." />
+  <title>Page Not Found | 4Dev Studio</title>
+  <meta name="description" content="That page doesn't exist — but we can help you find what you're looking for." />
+  <meta name="robots" content="noindex" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +13,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -42,7 +42,64 @@
   </header>
 
   <main>
-    <div data-service-detail></div>
+
+    <section class="section">
+      <div class="container-x">
+        <div class="error-hero">
+          <p class="eyebrow fade-up">Error 404</p>
+
+          <h1 class="fade-up delay-1">
+            That page took a<br />
+            <span class="text-gradient">wrong turn.</span>
+          </h1>
+
+          <p class="lead fade-up delay-2" style="margin-top: var(--space-6);">
+            The URL you followed doesn't exist — maybe it moved, or maybe
+            it never quite made it out of the workshop. Either way, we've
+            got you.
+          </p>
+
+          <div class="hero-actions fade-up delay-3" style="margin-top: var(--space-8);">
+            <a class="btn btn-primary btn-arrow" href="index.html">Back to home</a>
+            <a class="btn btn-ghost" href="contact.html">Report a broken link</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Helpful destinations -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">Or try one of these</p>
+          <h2>Popular places to go next.</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <a class="card" href="services.html">
+            <div class="card-icon">01</div>
+            <h3>Services</h3>
+            <p>Four ways we help businesses move faster — web, mobile, systems, and automation.</p>
+            <span class="card-link">Explore services</span>
+          </a>
+
+          <a class="card" href="work.html">
+            <div class="card-icon">02</div>
+            <h3>Work</h3>
+            <p>Selected projects and case studies — how we built systems and what changed.</p>
+            <span class="card-link">See our work</span>
+          </a>
+
+          <a class="card" href="contact.html">
+            <div class="card-icon">03</div>
+            <h3>Contact</h3>
+            <p>Tell us what you're trying to build. We reply within one business day.</p>
+            <span class="card-link">Get in touch</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -90,7 +147,8 @@
     </div>
   </footer>
 
-  <script src="js/services.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/case-studies.js"></script>
 </body>
 </html>

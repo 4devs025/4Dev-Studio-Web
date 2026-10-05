@@ -1,8 +1,8 @@
 /* ==========================================================================
    4Dev Studio — Shared behavior v2
    Nav toggle · FAQ accordion · current-year stamp
-   Lenis smooth scroll (your working config)
-   + Reveal-on-scroll · count-up · magnetic buttons · Spline guard
+   Native scrolling
+   Reveal-on-scroll · count-up · magnetic buttons · Spline guard
    ========================================================================== */
 
 (function () {
@@ -75,37 +75,9 @@
     el.textContent = new Date().getFullYear();
   });
 
-  /* ---------- Lenis smooth scroll ---------- */
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
-
-  let lenis = null;
-
-  if (!prefersReducedMotion && typeof Lenis !== "undefined") {
-    lenis = new Lenis({
-      smoothWheel: true,
-      lerp: 0.075,
-      wheelMultiplier: 0.72,
-      touchMultiplier: 0.92,
-      syncTouch: true,
-      syncTouchLerp: 0.1,
-      touchInertiaMultiplier: 18,
-      anchors: {
-        offset: -76,
-      },
-      stopInertiaOnNavigate: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }
-
-  window.__lenis = lenis;
 
   /* ==========================================================
      REVEAL ON SCROLL

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service | 4Dev Studio</title>
-  <meta name="description" content="See how we help businesses automate operations, sales, and product delivery." />
+  <title>Work | 4Dev Studio</title>
+  <meta name="description" content="Selected projects from 4Dev Studio — case studies across SaaS, professional services, and operations." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -42,7 +41,45 @@
   </header>
 
   <main>
-    <div data-service-detail></div>
+
+    <section class="section">
+      <div class="container-x">
+        <div style="max-width: 780px;">
+          <p class="eyebrow fade-up">Selected work</p>
+
+          <h1 class="fade-up delay-1">
+            Software that<br />
+            <span class="text-gradient">moves the numbers.</span>
+          </h1>
+
+          <p class="lead fade-up delay-2" style="margin-top: var(--space-6);">
+            A few of the systems we've built — and what changed for the businesses
+            running them. Every project below started with a conversation just
+            like the one you're about to have.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="grid grid-2" data-work-grid>
+          <!-- populated by js/case-studies.js -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="cta-band">
+          <p class="eyebrow">Yours could be next</p>
+          <h2>Let's build something worth writing up.</h2>
+          <p>Tell us what you're working on. We'll tell you how we'd approach it.</p>
+          <a class="btn btn-primary btn-arrow" href="contact.html">Book a discovery call</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -90,7 +127,8 @@
     </div>
   </footer>
 
-  <script src="js/services.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/case-studies.js"></script>
 </body>
 </html>

@@ -1236,3 +1236,468 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================
+   CASE STUDY CARDS
+   ========================================================== */
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+}
+
+.case-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+.case-card-industry {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+
+.case-card-year {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.case-card h3 {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.25;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.case-card-tagline {
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  margin-bottom: var(--space-8);
+  flex: 1;
+}
+
+.case-card-metric {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+  margin-bottom: var(--space-4);
+}
+
+.case-card-metric-num {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(90deg, #ffffff 0%, #8aa9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  flex-shrink: 0;
+}
+
+.case-card-metric-label {
+  font-size: 0.8125rem;
+  color: var(--text-faint);
+  line-height: 1.4;
+}
+
+/* ==========================================================
+   CASE STUDY DETAIL — Hero stats
+   ========================================================== */
+
+.case-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .case-hero-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.case-hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.case-hero-stat-num {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.case-hero-stat-label {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* ==========================================================
+   CASE STUDY DETAIL — Pull quote
+   ========================================================== */
+
+.case-quote {
+  position: relative;
+  padding: var(--space-12) var(--space-12) var(--space-12) var(--space-16);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(91, 140, 255, 0.06),
+    rgba(124, 92, 255, 0.04)
+  );
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  margin: 0;
+}
+
+.case-quote::before {
+  content: "\201C";
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--accent-soft);
+  opacity: 0.4;
+  font-family: Georgia, serif;
+}
+
+.case-quote p {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.5;
+  color: var(--text);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: var(--space-6);
+}
+
+.case-quote cite {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+  .case-quote {
+    padding: var(--space-8) var(--space-6) var(--space-8) var(--space-12);
+  }
+
+  .case-quote::before {
+    font-size: 3.5rem;
+    top: 12px;
+    left: 16px;
+  }
+}
+
+/* ==========================================================
+   WORK PAGE — Grid override
+   ========================================================== */
+
+/* Case cards in a 2-col grid feel better when they have room */
+.grid-2 .case-card {
+  min-height: 100%;
+}
+
+/* ==========================================================
+   FEATURED WORK (optional Home integration)
+   ========================================================== */
+
+.featured-work {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (max-width: 720px) {
+  .featured-work {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   TESTIMONIALS
+   ========================================================== */
+
+.testimonial {
+  position: relative;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.012) 100%
+  );
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
+    0 20px 60px -30px rgba(0, 0, 0, 0.9);
+  transition: border-color var(--t), transform var(--t), background var(--t);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+
+.testimonial:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+/* Decorative open-quote glyph */
+.testimonial-mark {
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 0.8;
+  color: var(--accent-soft);
+  opacity: 0.4;
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  letter-spacing: -0.005em;
+  margin: 0 0 var(--space-8) 0;
+  flex: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(91, 140, 255, 0.5), rgba(124, 92, 255, 0.5));
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.testimonial-role {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 2px;
+}
+
+/* ==========================================================
+   PRICING / ENGAGEMENT PAGE
+   ========================================================== */
+
+.pricing-grid {
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.045) 0%,
+    rgba(255, 255, 255, 0.012) 100%
+  );
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
+    0 20px 60px -30px rgba(0, 0, 0, 0.9);
+  transition: border-color var(--t), transform var(--t), background var(--t);
+  height: 100%;
+}
+
+.pricing-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-3px);
+}
+
+.pricing-card-featured {
+  border-color: rgba(124, 92, 255, 0.4);
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(91, 140, 255, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.08) inset,
+    0 30px 80px -40px rgba(124, 92, 255, 0.5);
+}
+
+.pricing-card-featured:hover {
+  border-color: rgba(124, 92, 255, 0.55);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: var(--shadow-glow);
+}
+
+.pricing-head {
+  margin-bottom: var(--space-6);
+}
+
+.pricing-tag {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: var(--space-3);
+}
+
+.pricing-head h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.025em;
+}
+
+.pricing-desc {
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+.pricing-features {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+  flex: 1;
+}
+
+.pricing-features li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.9375rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+.pricing-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+  opacity: 0.85;
+}
+
+.pricing-features li::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 4px;
+  height: 7px;
+  border-right: 1.5px solid #fff;
+  border-bottom: 1.5px solid #fff;
+  transform: rotate(45deg);
+}
+
+.pricing-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+@media (max-width: 980px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
+
+/* ==========================================================
+   404 PAGE
+   ========================================================== */
+
+.error-hero {
+  max-width: 780px;
+  padding-block: var(--space-16);
+}
+
+.error-hero h1 {
+  margin-bottom: var(--space-4);
+}

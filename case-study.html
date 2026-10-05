@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Service | 4Dev Studio</title>
-  <meta name="description" content="See how we help businesses automate operations, sales, and product delivery." />
+  <title>Case Study | 4Dev Studio</title>
+  <meta name="description" content="A 4Dev Studio case study — how we built a system and what changed for the business." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -23,7 +22,7 @@
   <header class="nav">
     <div class="container-x nav-inner">
       <a class="nav-logo" href="index.html">
-        <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+        <img src="assets/4Dev-Logo.png" alt="4Dev Studio" class="nav-logo-mark" />
         <span>4Dev</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
@@ -42,7 +41,9 @@
   </header>
 
   <main>
-    <div data-service-detail></div>
+    <div data-case-study-detail>
+      <!-- populated by js/case-studies.js from ?slug= -->
+    </div>
   </main>
 
   <footer class="footer">
@@ -50,7 +51,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="nav-logo" href="index.html">
-            <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+            <img src="assets/4Dev-Logo.png" alt="4Dev Studio" class="nav-logo-mark" />
             <span>4Dev</span>
           </a>
           <p>Software built for the way you work. Web, mobile, and business systems — custom built for you.</p>
@@ -90,7 +91,8 @@
     </div>
   </footer>
 
-  <script src="js/services.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/case-studies.js"></script>
 </body>
 </html>
