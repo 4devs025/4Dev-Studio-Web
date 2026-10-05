@@ -267,4 +267,7 @@
       });
     });
   }
+
+  /* Re-run reveal auto-tagger now that service cards exist */
+  window.dispatchEvent(new CustomEvent("services:rendered"));
 })();

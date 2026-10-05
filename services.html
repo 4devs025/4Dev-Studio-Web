@@ -4,15 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | 4Dev Studio</title>
-  <meta name="description" content="Explore custom software, workflow automation, sales systems, and product development services from 4Dev Studio." />
+  <meta name="description" content="Web apps, mobile apps, business systems, and automation — built around how your business actually runs." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"></div>
+  <!-- Background layers -->
+  <div class="orb orb-blue" aria-hidden="true"></div>
+  <div class="orb orb-violet" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
+  <!-- ==========================================================
+       NAV
+       ========================================================== -->
   <header class="nav">
     <div class="container-x nav-inner">
       <a class="nav-logo" href="index.html">
@@ -32,17 +45,86 @@
   </header>
 
   <main>
+
+    <!-- ==========================================================
+         1. HERO
+         ========================================================== -->
     <section class="section">
       <div class="container-x">
-        <div class="section-head">
-          <p class="eyebrow">What we do</p>
-          <h1>Four ways we help you move faster.</h1>
-          <p>Every engagement is scoped around an outcome — not hours or deliverables.</p>
+        <div style="max-width: 780px;">
+          <p class="eyebrow fade-up">Services</p>
+
+          <h1 class="fade-up delay-1">
+            Four ways we<br />
+            <span class="text-gradient">move your business forward.</span>
+          </h1>
+
+          <p class="lead fade-up delay-2" style="margin-top: var(--space-6);">
+            From web and mobile apps to full business systems — built around how
+            your business actually runs. Pick a starting point, or tell us what
+            you're trying to do and we'll suggest the right approach.
+          </p>
+
+          <div class="hero-actions fade-up delay-3" style="margin-top: var(--space-8); margin-bottom: 0;">
+            <a class="btn btn-primary btn-arrow" href="contact.html">Book a discovery call</a>
+            <a class="btn btn-ghost" href="#services-list">See all services</a>
+          </div>
         </div>
-        <div class="grid grid-4" data-services-grid></div>
       </div>
     </section>
 
+    <!-- ==========================================================
+         2. SERVICE GRID
+         ========================================================== -->
+    <section class="section" id="services-list">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>Pick a starting point.</h2>
+          <p>Most projects blend two or more. We'll help you scope the right one on the discovery call.</p>
+        </div>
+
+        <div class="grid grid-2" data-services-grid>
+          <!-- populated by js/services.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. WHY 4DEV — value props
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">Why work with us</p>
+          <h2>Built around outcomes, not hours.</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-icon">01</div>
+            <h3>Fixed scope, fixed price</h3>
+            <p>You know what you're getting and what it costs before we start. No hourly billing, no surprise invoices.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">02</div>
+            <h3>Weekly working demos</h3>
+            <p>You see progress every Friday — not a slide deck. Real, clickable software from week one.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">03</div>
+            <h3>You own everything</h3>
+            <p>Full source access, documentation, and no lock-in. If you ever want to take it in-house, you can.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         4. PROCESS
+         ========================================================== -->
     <section class="section">
       <div class="container-x">
         <div class="section-head">
@@ -50,6 +132,7 @@
           <h2>A process that keeps you in the loop.</h2>
           <p>Weekly demos, transparent progress, and no surprises.</p>
         </div>
+
         <div class="steps">
           <div class="step">
             <div class="step-num">STEP 01</div>
@@ -75,17 +158,67 @@
       </div>
     </section>
 
+    <!-- ==========================================================
+         5. FAQ
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div class="section-head">
+          <p class="eyebrow">Common questions</p>
+          <h2>Answers before you ask.</h2>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-q" type="button">Which service should I start with?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Most clients start with <strong>Automate Operations</strong> if they're drowning in manual work, or <strong>Build Your Idea</strong> if they have a product to ship. We'll recommend the right one on the call.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">Can you combine services?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Yes — most projects do. For example, "Automate Sales" often includes a custom dashboard from "Automate Operations". We scope the whole thing together.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">Do you work with existing systems?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Absolutely. We integrate with CRMs, ERPs, accounting tools, and internal databases. Or we build new systems that connect to what you already have.
+            </div></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" type="button">What's the typical timeline?</button>
+            <div class="faq-a"><div class="faq-a-inner">
+              Most builds ship in 6–10 weeks. Small automations can ship in 2–3 weeks. Full business systems take longer. We'll give you a realistic timeline after discovery.
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         6. CTA
+         ========================================================== -->
     <section class="section-sm">
       <div class="container-x">
         <div class="cta-band">
-          <h2>Ready to build something that works?</h2>
-          <p>Tell us what you're trying to do. We'll tell you how we'd approach it — no sales pitch.</p>
+          <p class="eyebrow">Not sure which one you need?</p>
+          <h2>Let's figure it out together.</h2>
+          <p>Tell us what you're trying to do. We'll tell you how we'd approach it — no sales pitch, no obligation.</p>
           <a class="btn btn-primary btn-arrow" href="contact.html">Book a discovery call</a>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
   <footer class="footer">
     <div class="container-x">
       <div class="footer-grid">
@@ -128,8 +261,11 @@
     </div>
   </footer>
 
+  <!-- ==========================================================
+       SCRIPTS
+       ========================================================== -->
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/main.js"></script>
   <script src="js/services.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

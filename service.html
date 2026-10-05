@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4dev Studio | Service</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service | 4Dev Studio</title>
+  <meta name="description" content="See how we help businesses automate operations, sales, and product delivery." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="orb orb-blue" aria-hidden="true"></div>
+  <div class="orb orb-violet" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="container-x nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+        <span>4Dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>
-    <main>
-      <h1>Service</h1>
-    </main>
-  </body>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="contact.html">Book a call</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div data-service-detail></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container-x">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" href="index.html">
+            <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+            <span>4Dev</span>
+          </a>
+          <p>Software built for the way you work. Web, mobile, and business systems — custom built for you.</p>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="service.html?slug=automate-operations">Automate Operations</a></li>
+            <li><a href="service.html?slug=automate-sales">Automate Sales</a></li>
+            <li><a href="service.html?slug=automate-business">Automate Business</a></li>
+            <li><a href="service.html?slug=build-your-idea">Build Your Idea</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get in touch</h5>
+          <ul>
+            <li><a href="mailto:hello@4dev.studio">hello@4dev.studio</a></li>
+            <li><a href="contact.html">Book a call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> 4Dev Studio. All rights reserved.</span>
+        <span>Built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

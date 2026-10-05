@@ -135,7 +135,7 @@
           el.classList.add("is-revealed");
         }
       });
-    }, 2500);
+    }, 8000);
 
     const io = new IntersectionObserver(
       function (entries) {
@@ -146,13 +146,18 @@
           }
         });
       },
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+      { rootMargin: "0px 0px -15% 0px", threshold: 0.01 }
     );
 
     items.forEach(function (el) { io.observe(el); });
 
+    window.addEventListener("services:rendered", function () {
+      const newItems = document.querySelectorAll("[data-reveal]:not(.is-revealed)");
+      newItems.forEach(function (el) { io.observe(el); });
+    });
+
     window.addEventListener("load", function () {
-      setTimeout(function () { clearTimeout(failsafe); }, 3000);
+      setTimeout(function () { clearTimeout(failsafe); }, 10000);
     });
   })();
 
@@ -176,7 +181,7 @@
     function animate(el) {
       const target = parseFloat(el.getAttribute("data-count"));
       const suffix = el.getAttribute("data-suffix") || "";
-      const duration = 1400;
+      const duration = 2200;
       const start = performance.now();
 
       function tick(now) {

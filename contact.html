@@ -1,21 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4dev Studio | Contact</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | 4Dev Studio</title>
+  <meta name="description" content="Tell us what you're building. We'll tell you how we'd approach it — no sales pitch, no obligation." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Background layers -->
+  <div class="orb orb-blue" aria-hidden="true"></div>
+  <div class="orb orb-violet" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ==========================================================
+       NAV
+       ========================================================== -->
+  <header class="nav">
+    <div class="container-x nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img class="nav-logo-mark" src="assets/4Dev-Logo.png" alt="" />
+        <span>4Dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
       </nav>
-    </header>
-    <main>
-      <h1>Contact</h1>
-    </main>
-  </body>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="mailto:hello@4dev.studio">hello@4dev.studio</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==========================================================
+         1. HERO
+         ========================================================== -->
+    <section class="section">
+      <div class="container-x">
+        <div style="max-width: 780px;">
+          <p class="eyebrow fade-up">Contact</p>
+
+          <h1 class="fade-up delay-1">
+            Tell us what you're<br />
+            <span class="text-gradient">trying to build.</span>
+          </h1>
+
+          <p class="lead fade-up delay-2" style="margin-top: var(--space-6);">
+            Fill in the form below and we'll get back to you within one
+            business day. Or email us directly at
+            <a href="mailto:hello@4dev.studio" style="color: var(--accent-soft);">hello@4dev.studio</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         2. FORM + SIDEBAR
+         ========================================================== -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="contact-layout">
+
+          <!-- FORM -->
+          <form
+            class="form"
+            action="https://formspree.io/f/xoejaopv"
+            method="POST"
+          >
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="company">Company (optional)</label>
+              <input id="company" name="company" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="field">
+              <label for="service">What are you interested in?</label>
+              <select id="service" name="service">
+                <option value="automate-operations">Automate Operations</option>
+                <option value="automate-sales">Automate Sales</option>
+                <option value="automate-business">Automate Business</option>
+                <option value="build-your-idea">Build Your Idea</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="budget">Approximate budget (optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Prefer not to say</option>
+                <option value="under-10k">Under $10k</option>
+                <option value="10k-25k">$10k – $25k</option>
+                <option value="25k-50k">$25k – $50k</option>
+                <option value="50k-100k">$50k – $100k</option>
+                <option value="100k-plus">$100k+</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Tell us about your project</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="What are you trying to build or fix? Any timelines or constraints we should know about?"
+              ></textarea>
+            </div>
+
+            <!-- Honeypot — bots fill this, humans don't see it -->
+            <input
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              style="position:absolute; left:-9999px; opacity:0;"
+            />
+
+            <button class="btn btn-primary btn-arrow" type="submit">Send message</button>
+
+            <p style="font-size: 0.8125rem; color: var(--text-faint); margin-top: var(--space-4);">
+              We reply within one business day. No spam, ever.
+            </p>
+          </form>
+
+          <!-- SIDEBAR -->
+          <aside>
+            <p class="eyebrow">Direct</p>
+
+            <h3 style="margin-bottom: var(--space-4);">Prefer email?</h3>
+            <p style="margin-bottom: var(--space-8);">
+              Reach us at
+              <a href="company@4dev.it.com" style="color: var(--accent-soft);">company@4dev.it.com</a>
+              — we read every message ourselves.
+            </p>
+
+            <p class="eyebrow">What happens next</p>
+            <ul class="check-list" style="margin-bottom: var(--space-8);">
+              <li>We read your message within one business day</li>
+              <li>You get a short reply with our thoughts and next steps</li>
+              <li>If it's a fit, we book a 30-minute discovery call</li>
+              <li>After the call, you get a clear proposal — no strings</li>
+            </ul>
+
+            <p class="eyebrow">Availability</p>
+            <div class="pills">
+              <span class="pill">Mon–Fri</span>
+              <span class="pill">9am–6pm</span>
+              <span class="pill">Remote-first</span>
+              <span class="pill">Global clients</span>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         3. FINAL REASSURANCE
+         ========================================================== -->
+    <section class="section-sm">
+      <div class="container-x">
+        <div class="cta-band">
+          <p class="eyebrow">No pressure</p>
+          <h2>Every project starts with a conversation.</h2>
+          <p>Not every call turns into a project — and that's fine. Worst case, you leave with a clearer idea of how to approach your problem.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================
+       FOOTER
+       ========================================================== -->
+  <footer class="footer">
+    <div class="container-x">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" href="index.html">
+            <img src="assets/logo.svg" alt="4Dev Studio" class="nav-logo-img" />
+          </a>
+          <p>Software built for the way you work. Web, mobile, and business systems — custom built for you.</p>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="service.html?slug=automate-operations">Automate Operations</a></li>
+            <li><a href="service.html?slug=automate-sales">Automate Sales</a></li>
+            <li><a href="service.html?slug=automate-business">Automate Business</a></li>
+            <li><a href="service.html?slug=build-your-idea">Build Your Idea</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get in touch</h5>
+          <ul>
+            <li><a href="mailto:company@4dev.it.com">company@4dev.it.com</a></li>
+            <li><a href="contact.html">Book a call</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> 4Dev Studio. All rights reserved.</span>
+        <span>Built with care.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       SCRIPTS
+       ========================================================== -->
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
