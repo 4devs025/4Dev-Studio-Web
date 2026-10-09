@@ -1765,9 +1765,6 @@ p {
 }
 #techlead-says {
   color: #ffffff;
-  padding: 10px;
-  background-color: rgba(73, 66, 67, 0.542);
-  border-radius: 15px;
 }
 #techlead-2026 {
   color: rgba(1, 229, 250, 0.495);
@@ -1788,9 +1785,6 @@ p {
 }
 #founder-says {
   color: #ffffff;
-  padding: 10px;
-  background-color: rgba(73, 66, 67, 0.542);
-  border-radius: 15px;
 }
 #founder-2026 {
   color: rgba(188, 186, 186, 0.475);
@@ -1810,9 +1804,6 @@ p {
 }
 #cofounder-says {
   color: #ffffff;
-  padding: 10px;
-  background-color: rgba(73, 66, 67, 0.542);
-  border-radius: 15px;
 }
 #cofounder-2026 {
   color: rgba(188, 186, 186, 0.475);
