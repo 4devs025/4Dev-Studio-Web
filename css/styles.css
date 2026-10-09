@@ -56,7 +56,8 @@
 }
 
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body,
@@ -552,28 +553,6 @@ p {
   border-top: 1px solid var(--line);
   max-width: 560px;
   margin-inline: 0;
-}
-
-.hero .lead {
-  margin-bottom: var(--space-8);
-  max-width: 52ch;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  margin-bottom: var(--space-12);
-}
-
-/* Trust row — swap from 3-column grid to stacked inline */
-.hero-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-8);
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--line);
-  max-width: 560px;
 }
 
 .hero-trust-item {
@@ -1214,10 +1193,10 @@ p {
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(24px);
   transition:
-    opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 [data-reveal].is-revealed {
@@ -1761,13 +1740,19 @@ p {
     inset 0 0 12px rgba(255, 255, 255, 0.1);
 }
 #techlead {
-  color: #6641f8;
+  color: #ff8d02b7;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
 }
 #techlead-says {
   color: #ffffff;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: #0404181b;
+  border-radius: 10px;
 }
 #techlead-2026 {
-  color: rgba(1, 229, 250, 0.495);
+  color: rgba(210, 212, 159, 0.857);
 }
 
 
@@ -1776,18 +1761,24 @@ p {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 1.5px solid rgb(6, 130, 25);
+  border: 1.5px solid rgb(5, 19, 7);
   box-shadow:
     inset 0 0 12px rgba(255, 255, 255, 0.1);
 }
 #founder {
-  color: #6641f8;
+  color: #ff8d02b7;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
 }
 #founder-says {
   color: #ffffff;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: #0404181b;
+  border-radius: 10px;
 }
 #founder-2026 {
-  color: rgba(188, 186, 186, 0.475);
+  color: rgba(210, 212, 159, 0.857);
 }
 
 /* Owen */
@@ -1795,16 +1786,215 @@ p {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 1.5px solid rgb(6, 130, 25);
+  border: 1.5px solid rgb(5, 19, 7);
   box-shadow:
     inset 0 0 12px rgba(255, 255, 255, 0.1);
 }
 #cofounder {
-  color: #6641f8;
+  color: #ff8d02b7;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: large;
 }
 #cofounder-says {
   color: #ffffff;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: #0404181b;
+  border-radius: 10px;
 }
 #cofounder-2026 {
-  color: rgba(188, 186, 186, 0.475);
+  color: rgba(210, 212, 159, 0.857);
+}
+
+/*team-role font*/
+
+/* Preserve name color inside magnifier */
+.magnifier-content .founder-name-clone {
+  color: rgba(210, 212, 159, 0.857);
+}
+
+.team-role {
+  color: #a5a7b3;
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  isolation: isolate;
+  cursor: default;
+
+  transition: color 0.4s ease;
+}
+
+.team-role::before {
+  content: "";
+  position: absolute;
+  inset: -2px -7px;
+  z-index: -1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    115deg,
+    rgba(255,255,255,0.12) 0%,
+    #ffffffa1 45%,
+    rgba(255,255,255,0.3) 100%
+  );
+
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 5px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 0 15px rgba(255,255,255,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.45);
+
+  opacity: 0;
+  transform: scaleX(0.85);
+  transition:
+    opacity 0.35s ease,
+    transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+
+.team-role::after {
+  content: "";
+  position: absolute;
+  inset: -2px -7px;
+  pointer-events: none;
+  z-index: 1;
+
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,255,255,0.65) 50%,
+    transparent 70%
+  );
+
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  opacity: 0;
+}
+
+.team-role:hover {
+  color: #202536;
+}
+
+.team-role:hover::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.team-role:hover::after {
+  opacity: 1;
+  animation: glassSweep 0.85s ease-out forwards;
+}
+
+@keyframes glassSweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-role,
+  .team-role::before {
+    transition: none;
+  }
+
+  .team-role:hover::after {
+    animation: none;
+  }
+}
+
+
+/* Optical Illusion hehez ~ Jez*/
+
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .glass-magnify, .glass-magnify * { cursor: none; }
+}
+
+#founder-says,
+#cofounder-says,
+#techlead-says {
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  background-color: #0404181b;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+.magnifier-lens {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 9999;
+
+  /* No visible border */
+  border: none;
+  background: #101322;
+
+  /* Soft feathered edges */
+  -webkit-mask-image: radial-gradient(
+    circle,
+    black 0%,
+    black 52%,
+    rgba(0, 0, 0, 0.85) 68%,
+    rgba(0, 0, 0, 0.35) 85%,
+    transparent 100%
+  );
+
+  mask-image: radial-gradient(
+    circle,
+    black 0%,
+    black 52%,
+    rgba(0, 0, 0, 0.85) 68%,
+    rgba(0, 0, 0, 0.35) 85%,
+    transparent 100%
+  );
+
+  box-shadow: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+
+  transition: opacity 0.25s ease;
+}
+
+.magnifier-lens.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.magnifier-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.magnifier-lens::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+
+  background: radial-gradient(
+    ellipse at 25% 15%,
+    rgba(255,255,255,0.15),
+    transparent 55%
+  );
 }

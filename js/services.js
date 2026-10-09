@@ -243,29 +243,7 @@
         "</div>" +
       "</section>";
 
-    // Re-bind FAQ accordion for dynamically injected items
-    document.querySelectorAll(".faq-item").forEach(function (item) {
-      const q = item.querySelector(".faq-q");
-      const a = item.querySelector(".faq-a");
-      if (!q || !a) return;
-      q.addEventListener("click", function () {
-        const isOpen = item.classList.contains("is-open");
-        document.querySelectorAll(".faq-item.is-open").forEach(function (other) {
-          if (other !== item) {
-            other.classList.remove("is-open");
-            const oa = other.querySelector(".faq-a");
-            if (oa) oa.style.maxHeight = null;
-          }
-        });
-        if (isOpen) {
-          item.classList.remove("is-open");
-          a.style.maxHeight = null;
-        } else {
-          item.classList.add("is-open");
-          a.style.maxHeight = a.scrollHeight + "px";
-        }
-      });
-    });
+
   }
 
   /* Re-run reveal auto-tagger now that service cards exist */

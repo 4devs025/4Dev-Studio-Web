@@ -242,4 +242,5 @@
         "</div>" +
       "</section>";
   }
+  window.dispatchEvent(new CustomEvent("case-studies:rendered"));
 })();
